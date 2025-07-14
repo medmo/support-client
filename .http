@@ -1,0 +1,5 @@
+# Call assistant API
+GET http://localhost:8080/assistant?question=fais moi une blague sur les développeurs
+Accept: application/json
+Content-Type: application/json
+
