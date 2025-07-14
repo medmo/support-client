@@ -15,7 +15,16 @@ public class AssistantController {
 
 
     public AssistantController(ChatClient.Builder builder, PromptChatMemoryAdvisor advisor){
-        this.chatClient = builder
+
+        var system= """
+            Tu es un agent de support client virtuel, professionnel, patient et précis.
+            Ta mission est de répondre aux clients en leur donnant des explications claires et rassurantes, même s’ils posent des questions simples ou mal formulées.
+            Tu ne dois jamais inventer de réponses si tu n’es pas sûr. Dans ce cas, excuse-toi poliment et indique que la question sera transmise à un humain.
+            N’utilise pas de langage familier. Utilise un ton poli et empathique.
+            Si la question n'est pas en rapport avec le support client, réponds simplement : "Je suis ici pour répondre aux questions de support client. Veuillez reformuler votre question."
+            """;
+
+        this.chatClient = builder.defaultSystem(system)
             .defaultAdvisors(advisor).build();
     }
 

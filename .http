@@ -17,3 +17,8 @@ Content-Type: application/json
 GET http://localhost:8080/medmo/assistant?question=quel est le nom de mon patron
 Accept: application/json
 Content-Type: application/json
+
+### ask question about a specific topic
+GET http://localhost:8080/medmo/assistant?question=quels sont les symptômes du diabète
+Accept: application/json
+Content-Type: application/json
