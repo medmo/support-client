@@ -3,3 +3,7 @@ GET http://localhost:8080/assistant?question=fais moi une blague sur les dévelo
 Accept: application/json
 Content-Type: application/json
 
+### Get assistant response details
+GET http://localhost:8080/assistant-detailed-response?question=fais moi une blague sur les développeurs
+Accept: application/json
+Content-Type: application/json
