@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+    postgresml:
+        image: ghcr.io/postgresml/postgresml:2.9.3
+        container_name: supportclientdb
+        environment:
+            - POSTGRES_DB=supportclientdb
+            - POSTGRES_PASSWORD=mypassword
+            - POSTGRES_USER=myuser
+        volumes:
+            - supportclientdb_data:/var/lib/postgresql/data
+        ports:
+            - "5435:5432"
+            - "8000:8000"
+
+volumes:
+    supportclientdb_data:

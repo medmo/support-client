@@ -7,3 +7,13 @@ Content-Type: application/json
 GET http://localhost:8080/assistant-detailed-response?question=fais moi une blague sur les développeurs
 Accept: application/json
 Content-Type: application/json
+
+### Chat Memory test
+GET http://localhost:8080/medmo/assistant?question=mon patron s'appelle Michel
+Accept: application/json
+Content-Type: application/json
+
+###
+GET http://localhost:8080/medmo/assistant?question=quel est le nom de mon patron
+Accept: application/json
+Content-Type: application/json
